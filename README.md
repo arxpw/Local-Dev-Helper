@@ -4,6 +4,9 @@ Working on a microservice architecture with multiple branches & ports on your lo
 
 This project is intended to help with that process.
 
+![image](https://github.com/user-attachments/assets/d55a47b9-eee4-4b3f-b741-dd0216c8ede5)
+
+
 ## Project roadmap list
 
 - [ ] Scan all project directories and report back their data in a web UI
