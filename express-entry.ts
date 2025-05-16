@@ -6,6 +6,9 @@ import { vikeHandler } from "./server/vike-handler";
 import { createHandler } from "@universal-middleware/express";
 import express from "express";
 import { createDevMiddleware } from "vike";
+import { projectsHandler } from "./server/projects-handler";
+
+import 'dotenv/config';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -36,6 +39,8 @@ async function startServer() {
   }
 
   app.post("/api/todo/create", createHandler(createTodoHandler)());
+
+  app.get('/api/projects', createHandler(projectsHandler)());
 
   /**
    * Vike route

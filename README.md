@@ -1,81 +1,33 @@
-Generated with [vike.dev/new](https://vike.dev/new) ([version 433](https://www.npmjs.com/package/create-vike/v/0.0.433)) using this command:
+# Local Dev Helper
 
-```sh
-npm create vike@latest --- --react --tailwindcss --shadcn-ui --express
-```
+Working on a microservice architecture with multiple branches & ports on your local?
 
-## Contents
+This project is intended to help with that process.
 
-* [React](#react)
+## Project roadmap list
 
-  * [`/pages/+config.ts`](#pagesconfigts)
-  * [Routing](#routing)
-  * [`/pages/_error/+Page.jsx`](#pages_errorpagejsx)
-  * [`/pages/+onPageTransitionStart.ts` and `/pages/+onPageTransitionEnd.ts`](#pagesonpagetransitionstartts-and-pagesonpagetransitionendts)
-  * [SSR](#ssr)
-  * [HTML Streaming](#html-streaming)
+[x] Scan all project directories and report back their data in a web UI
+  [x] For any projects using GIT, report back the branch
+  [x] For any projects with PORTS, check if they are RUNNING
+[] Config JSON file to exclude projects
+[] Config JSON file to scan specific projects
+[] Link projects together with ENV dependencies using a local JSON config, "Why did project x not run?", "OH! We need project y running first!"
+[] Remove other scaffold work from Vike
+  [] Remove star-wars
+  [] Remove todo
+  [] Alter logo and nav, clean up
 
-* [shadcn/ui](#shadcnui)
+## Get started
 
-  * [Configuration](#configuration)
-  * [Add Components to Your Project](#add-components-to-your-project)
+Copy the `.env.development` file into a fresh `.env` file and fill in the right directory for where your projects are located.
 
-## React
+```PROJECTS_DIRECTORY``` IS REQUIRED.
 
-This app is ready to start. It's powered by [Vike](https://vike.dev) and [React](https://react.dev/learn).
+```npm install```
 
-### `/pages/+config.ts`
+```npm run preview```
 
-Such `+` files are [the interface](https://vike.dev/config) between Vike and your code. It defines:
+Done!
 
-* A default [`<Layout>` component](https://vike.dev/Layout) (that wraps your [`<Page>` components](https://vike.dev/Page)).
-* A default [`title`](https://vike.dev/title).
-* Global [`<head>` tags](https://vike.dev/head-tags).
-
-### Routing
-
-[Vike's built-in router](https://vike.dev/routing) lets you choose between:
-
-* [Filesystem Routing](https://vike.dev/filesystem-routing) (the URL of a page is determined based on where its `+Page.jsx` file is located on the filesystem)
-* [Route Strings](https://vike.dev/route-string)
-* [Route Functions](https://vike.dev/route-function)
-
-### `/pages/_error/+Page.jsx`
-
-The [error page](https://vike.dev/error-page) which is rendered when errors occur.
-
-### `/pages/+onPageTransitionStart.ts` and `/pages/+onPageTransitionEnd.ts`
-
-The [`onPageTransitionStart()` hook](https://vike.dev/onPageTransitionStart), together with [`onPageTransitionEnd()`](https://vike.dev/onPageTransitionEnd), enables you to implement page transition animations.
-
-### SSR
-
-SSR is enabled by default. You can [disable it](https://vike.dev/ssr) for all your pages or only for some pages.
-
-### HTML Streaming
-
-You can enable/disable [HTML streaming](https://vike.dev/stream) for all your pages, or only for some pages while still using it for others.
-
-## shadcn/ui
-
-Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source.
-
-### Configuration
-
-see [shadcn/ui theming](https://ui.shadcn.com/docs/theming)
-
-Base Configuration can be found in `components.json` file.
-
-> \[!NOTE]
-> changes to the `components.json` file **will not** be reflected in existing components. Only new components will be affected.
-
-### Add Components to Your Project
-
-**Example:** add a component to your project.
-`pnpm shadcn add button`
-
-use the `<Button />` component in your project:
-`import { Button } from "@/components/ui/button";`
-
-more [shadcn/ui components](https://ui.shadcn.com/docs/components/accordion)
-
+(OSS credits)
+This project powered by [Vike](https://vike.dev) and [React](https://react.dev/learn).
